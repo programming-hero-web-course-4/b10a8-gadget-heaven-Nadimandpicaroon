@@ -7,9 +7,9 @@
     "price": 999.99,
     "description": "High-performance Dell laptop with an advanced display and long-lasting battery.",
     "Specification": [
-      "15.6-inch OLED display",
-      "Intel i7 processor",
-      "16GB RAM",
+      "15.6-inch OLED display|| ",
+      "Intel i7 processor|| ",
+      "16GB RAM|| ",
       "512GB SSD"
     ],
     "availability": true,
@@ -23,9 +23,9 @@
     "price": 599.99,
     "description": "Affordable ASUS laptop with a sleek design and powerful performance.",
     "Specification": [
-      "14-inch Full HD display",
-      "Intel i5 processor",
-      "8GB RAM",
+      "14-inch Full HD display|| ",
+      "Intel i5 processor|| ",
+      "8GB RAM|| ",
       "256GB SSD"
     ],
     "availability": true,
@@ -39,9 +39,9 @@
     "price": 899.99,
     "description": "Lightweight Lenovo ThinkPad with high-resolution display and smooth performance.",
     "Specification": [
-      "13.3-inch QHD display",
-      "Intel i7 processor",
-      "16GB RAM",
+      "13.3-inch QHD display|| ",
+      "Intel i7 processor|| ",
+      "16GB RAM|| ",
       "512GB SSD"
     ],
     "availability": false,
@@ -55,9 +55,9 @@
     "price": 749.99,
     "description": "Versatile ASUS laptop with touchscreen and flexible hinge design.",
     "Specification": [
-      "14-inch OLED touchscreen",
-      "Intel i5 processor",
-      "8GB RAM",
+      "14-inch OLED touchscreen|| ",
+      "Intel i5 processor|| ",
+      "8GB RAM|| ",
       "512GB SSD"
     ],
     "availability": true,
@@ -71,9 +71,9 @@
     "price": 459.99,
     "description": "Compact Dell laptop with essential features for everyday tasks.",
     "Specification": [
-      "13.3-inch Full HD display",
-      "Intel i3 processor",
-      "8GB RAM",
+      "13.3-inch Full HD display|| ",
+      "Intel i3 processor|| ",
+      "8GB RAM|| ",
       "256GB SSD"
     ],
     "availability": true,
@@ -87,9 +87,9 @@
     "price": 1099.99,
     "description": "Powerful Lenovo gaming laptop with high refresh rate display and advanced graphics.",
     "Specification": [
-      "15.6-inch FHD 144Hz display",
-      "Intel i7 processor",
-      "16GB RAM",
+      "15.6-inch FHD 144Hz display|| ",
+      "Intel i7 processor|| ",
+      "16GB RAM|| ",
       "1TB SSD"
     ],
     "availability": true,
@@ -103,9 +103,9 @@
     "price": 999.99,
     "description": "Apple's advanced iPhone model with triple-camera system and 5G support.",
     "Specification": [
-      "6.1-inch OLED display",
-      "Triple-camera system",
-      "5G support",
+      "6.1-inch OLED display|| ",
+      "Triple-camera system|| ",
+      "5G support|| ",
       "128GB storage"
     ],
     "availability": true,
@@ -119,9 +119,9 @@
     "price": 429.99,
     "description": "Affordable iPhone model with classic design and fast performance.",
     "Specification": [
-      "4.7-inch Retina display",
-      "Single-camera system",
-      "4G LTE",
+      "4.7-inch Retina display|| ",
+      "Single-camera system|| ",
+      "4G LTE|| ",
       "64GB storage"
     ],
     "availability": true,
@@ -135,9 +135,9 @@
     "price": 279.99,
     "description": "Noise-canceling Sony earbuds with high-fidelity sound quality.",
     "Specification": [
-      "Active noise cancellation",
-      "24-hour battery life with case",
-      "Bluetooth 5.2",
+      "Active noise cancellation|| ",
+      "24-hour battery life with case|| ",
+      "Bluetooth 5.2|| ",
       "IPX4 water resistance"
     ],
     "availability": true,
@@ -151,9 +151,9 @@
     "price": 249.99,
     "description": "Apple's premium wireless earbuds with active noise cancellation and spatial audio.",
     "Specification": [
-      "Active noise cancellation",
-      "24-hour battery life with case",
-      "Bluetooth 5.3",
+      "Active noise cancellation|| ",
+      "24-hour battery life with case|| ",
+      "Bluetooth 5.3|| ",
       "IPX4 water resistance"
     ],
     "availability": false,

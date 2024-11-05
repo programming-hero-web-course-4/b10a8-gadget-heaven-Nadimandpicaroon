@@ -11,6 +11,7 @@ const Banner = () => {
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
+
         <button className="btn rounded-xl bg-white text-[#9538E2] mb-64">
           Shop Now
         </button>

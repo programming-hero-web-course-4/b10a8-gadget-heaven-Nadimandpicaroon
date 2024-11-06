@@ -2,8 +2,11 @@ import { useLoaderData, useParams } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 
 const GadgetDetails = () => {
+  const { addProduct } = useContext(CartContext);
   const { product_id } = useParams();
   const id = parseInt(product_id);
 
@@ -98,7 +101,10 @@ const GadgetDetails = () => {
               </div>
 
               <div className="flex gap-x-2">
-                <button className="btn gap-2 rounded-3xl bg-[#9538E2] text-white font-bold hover:bg-[#57158c]">
+                <button
+                  onClick={() => addProduct(gadget)}
+                  className="btn gap-2 rounded-3xl bg-[#9538E2] text-white font-bold hover:bg-[#57158c]"
+                >
                   Add To Cart <FontAwesomeIcon icon={faCartShopping} />
                 </button>
                 <span>

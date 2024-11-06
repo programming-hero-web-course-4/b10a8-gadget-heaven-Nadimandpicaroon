@@ -1,9 +1,13 @@
 import { CartContext } from "../../Context/CartContext";
-import { useContext } from "react";
+import { WishlistContext } from "../WishList/WishListContext";
+import { useContext, useState } from "react";
 import DashProduct from "../DashProduct/DashProduct";
 
 const Dashboard = () => {
-  const { cartProducts, removeProduct } = useContext(CartContext);
+  const { cartProducts, addProduct, removeProduct } = useContext(CartContext);
+  const { wishlistProducts, removeProductFromWishlist } =
+    useContext(WishlistContext);
+  const [view, setView] = useState("cart");
 
   return (
     <div>
@@ -15,23 +19,65 @@ const Dashboard = () => {
         </p>
 
         <div className="my-5 items-center">
-          <button className="btn rounded-3xl py-3 px-12 font-bold bg-white text-[#9538E2] mr-3">
+          <button
+            className={`btn rounded-3xl py-3 px-12 font-bold ${
+              view === "cart"
+                ? "bg-white text-[#9538E2]"
+                : "bg-[#9538E2] text-white"
+            }`}
+            onClick={() => setView("cart")}
+          >
             Cart
           </button>
-          <button className="btn rounded-3xl py-3 px-12 font-bold bg-white text-[#9538E2]">
+          <button
+            className={`btn rounded-3xl py-3 px-12 font-bold ${
+              view === "wishlist"
+                ? "bg-white text-[#9538E2]"
+                : "bg-[#9538E2] text-white"
+            }`}
+            onClick={() => setView("wishlist")}
+          >
             Wishlist
           </button>
         </div>
       </div>
-      <div>
-        {cartProducts.map((dashProduct) => (
-          <DashProduct
-            dashProduct={dashProduct}
-            removeProduct={removeProduct}
-            key={dashProduct.product_id}
-          ></DashProduct>
-        ))}
-      </div>
+      {view === "cart" ? (
+        <div>
+          {cartProducts && cartProducts.length > 0 ? (
+            cartProducts.map((dashProduct) => (
+              <DashProduct
+                dashProduct={dashProduct}
+                removeProduct={removeProduct}
+                key={dashProduct.product_id}
+              />
+            ))
+          ) : (
+            <p className="text-center font-bold text-3xl text-gray-700">
+              No products in the cart.
+            </p>
+          )}
+        </div>
+      ) : (
+        <div>
+          {wishlistProducts && wishlistProducts.length > 0 ? (
+            wishlistProducts.map((wishlistProduct) => (
+              <DashProduct
+                dashProduct={wishlistProduct}
+                key={wishlistProduct.product_id}
+                removeProduct={() => {
+                  removeProductFromWishlist(wishlistProduct.product_id);
+                  addProduct(wishlistProduct);
+                }}
+                isWishlistView
+              />
+            ))
+          ) : (
+            <p className="text-center font-bold text-3xl text-gray-700">
+              No products in the wishlist.
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 };

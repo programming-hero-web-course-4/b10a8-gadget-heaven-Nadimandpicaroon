@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
+import { WishlistContext } from "../WishList/WishListContext";
 
 const GadgetDetails = () => {
   const { addProduct } = useContext(CartContext);
+  const { addProductToWishlist } = useContext(WishlistContext);
   const { product_id } = useParams();
   const id = parseInt(product_id);
 
@@ -108,7 +110,11 @@ const GadgetDetails = () => {
                   Add To Cart <FontAwesomeIcon icon={faCartShopping} />
                 </button>
                 <span>
-                  <button className="btn bg-white border-2 rounded-full">
+                  <button
+                    onClick={() => addProductToWishlist(gadget)}
+                    className="btn bg-white border-2 rounded-full"
+                  >
+                    Wishlist
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

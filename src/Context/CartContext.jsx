@@ -1,9 +1,12 @@
 import { createContext, useState } from "react";
+import { getLocalStorage, setLocalStorage } from "../utilities/LocalStorage";
 
 export const CartContext = createContext({});
 
 export const CartContextProvider = ({ children }) => {
-  const [cartProducts, setCartProducts] = useState([]);
+  const [cartProducts, setCartProducts] = useState(
+    getLocalStorage("cartProducts")
+  );
 
   function addProduct(product) {
     const isProductInCart = cartProducts.some(
@@ -15,15 +18,17 @@ export const CartContextProvider = ({ children }) => {
 
       return;
     }
-
-    setCartProducts([...cartProducts, product]);
+    const newCartProducts = [...cartProducts, product];
+    setCartProducts(newCartProducts);
+    setLocalStorage("cartProducts", newCartProducts);
     alert("Added in the cart");
     console.log(cartProducts);
   }
-  function removeProduct(product_id, product_title) {
+  function removeProduct(product_id) {
     const filteredProducts = cartProducts.filter(
       (cartProduct) => cartProduct.product_id !== product_id
     );
+    setLocalStorage("cartProducts", filteredProducts);
     setCartProducts(filteredProducts);
     alert(`Product has been removed`);
   }

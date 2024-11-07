@@ -32,8 +32,27 @@ export const CartContextProvider = ({ children }) => {
     setCartProducts(filteredProducts);
     alert(`Product has been removed`);
   }
+
+  function removeCartProducts() {
+    setLocalStorage("cartProducts", []);
+    setCartProducts([]);
+  }
+  function sortCartProduct() {
+    const sorted = cartProducts.sort(
+      (productA, productB) => productA.price - productB.price
+    );
+    setCartProducts(sorted);
+  }
   return (
-    <CartContext.Provider value={{ cartProducts, addProduct, removeProduct }}>
+    <CartContext.Provider
+      value={{
+        cartProducts,
+        addProduct,
+        removeProduct,
+        removeCartProducts,
+        sortCartProduct,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

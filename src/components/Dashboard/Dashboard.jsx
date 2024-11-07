@@ -84,7 +84,7 @@ const Dashboard = () => {
               <div className="flex items-center gap-x-6">
                 <span>
                   <h3 className="text-3xl font-bold">
-                    Total Cost: {totalAmount}
+                    Total Cost: ${totalAmount}
                   </h3>
                 </span>
                 {/* sort By Price */}
@@ -126,7 +126,7 @@ const Dashboard = () => {
                         Thanks For Purchasing
                       </p>
                       <p className="mb-4 text-lg font-semibold text-gray-600">
-                        Total:
+                        Total:${totalAmount}
                       </p>
                       <div className="items-center">
                         <form method="dialog">
@@ -163,8 +163,8 @@ const Dashboard = () => {
         </div>
       ) : (
         <div>
-          <div>
-            <h2>Wishlist</h2>
+          <div className="container mx-auto my-4">
+            <h3 className="text-3xl font-bold">Wishlist</h3>
           </div>
           {wishlistProducts && wishlistProducts.length > 0 ? (
             wishlistProducts.map((wishlistProduct) => (

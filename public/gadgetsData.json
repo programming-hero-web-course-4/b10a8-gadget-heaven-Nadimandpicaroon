@@ -99,7 +99,7 @@
     "product_id": 201,
     "product_title": "iPhone 13 Pro",
     "product_image": "https://i.ibb.co.com/QQtmhV2/Iphone13-Pro.jpg",
-    "category": "iPhones",
+    "category": "Smartphones",
     "price": 999.99,
     "description": "Apple's advanced iPhone model with triple-camera system and 5G support.",
     "Specification": [
@@ -115,7 +115,7 @@
     "product_id": 202,
     "product_title": "iPhone SE (2023)",
     "product_image": "https://i.ibb.co.com/3yff94v/iphone-se-2023.jpg",
-    "category": "iPhones",
+    "category": "Smartphones",
     "price": 429.99,
     "description": "Affordable iPhone model with classic design and fast performance.",
     "Specification": [
@@ -127,6 +127,71 @@
     "availability": true,
     "rating": 4.4
   },
+  {
+    "product_id": 206,
+    "product_title": "iPhone 12 Mini",
+    "product_image": "https://i.ibb.co.com/878q73N/i-Phone-12-Mini.jpg",
+    "category": "Smartphones",
+    "price": 699.99,
+    "description": "Compact iPhone 12 Mini with dual-camera system and excellent performance.",
+    "Specification": [
+      "5.4-inch Super Retina XDR display|| ",
+      "Dual-camera system|| ",
+      "5G support|| ",
+      "64GB storage"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 203,
+    "product_title": "Samsung Galaxy S21",
+    "product_image": "https://i.ibb.co.com/mHqgq6N/Samsung-Galaxy-S21.jpg",
+    "category": "Smartphones",
+    "price": 799.99,
+    "description": "Flagship Samsung phone with pro-grade camera and smooth performance.",
+    "Specification": [
+      "6.2-inch AMOLED display|| ",
+      "Triple-lens camera|| ",
+      "5G support|| ",
+      "128GB storage"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 204,
+    "product_title": "iPhone 14",
+    "product_image": "https://i.ibb.co.com/SQpmYJ4/i-Phone-14.jpg",
+    "category": "Smartphones",
+    "price": 899.99,
+    "description": "Apple's iPhone 14 with improved camera system and enhanced battery life.",
+    "Specification": [
+      "6.1-inch Super Retina XDR display|| ",
+      "Dual-camera system|| ",
+      "A15 Bionic chip|| ",
+      "128GB storage"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 205,
+    "product_title": "Google Pixel 6",
+    "product_image": "https://i.ibb.co.com/4tB4F4N/Google-Pixel-6.jpg",
+    "category": "Smartphones",
+    "price": 599.99,
+    "description": "Innovative Pixel phone with excellent camera and Google's custom processor.",
+    "Specification": [
+      "6.4-inch OLED display|| ",
+      "Dual-lens camera|| ",
+      "5G support|| ",
+      "128GB storage"
+    ],
+    "availability": false,
+    "rating": 4.5
+  },
+
   {
     "product_id": 301,
     "product_title": "Sony WF-1000XM4 Earbuds",
@@ -158,5 +223,101 @@
     ],
     "availability": false,
     "rating": 4.7
+  },
+  {
+    "product_id": 303,
+    "product_title": "Jabra Elite 75t",
+    "product_image": "https://i.ibb.co.com/G9PsX42/Jabra-Elite-75t.jpg",
+    "category": "Earbuds",
+    "price": 149.99,
+    "description": "Compact true wireless earbuds with customizable sound and noise isolation.",
+    "Specification": [
+      "4-microphone call technology|| ",
+      "Active noise cancellation|| ",
+      "Up to 7.5 hours of battery life|| ",
+      "Fast charging case"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 401,
+    "product_title": "Apple Watch Series 8",
+    "product_image": "https://i.ibb.co.com/BwBSb44/Apple-Watch-Series-8.jpg",
+    "category": "Smartwatches",
+    "price": 399.99,
+    "description": "Apple's latest smartwatch with advanced health monitoring and always-on display.",
+    "Specification": [
+      "45mm Retina display|| ",
+      "Blood oxygen sensor|| ",
+      "ECG app|| ",
+      "Water resistant to 50 meters"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": 402,
+    "product_title": "Samsung Galaxy Watch 5",
+    "product_image": "https://i.ibb.co.com/gP2scn3/Samsung-Galaxy-Watch-5.jpg",
+    "category": "Smartwatches",
+    "price": 279.99,
+    "description": "Feature-rich Samsung smartwatch with fitness tracking and long battery life.",
+    "Specification": [
+      "1.4-inch Super AMOLED display|| ",
+      "Body composition analysis|| ",
+      "GPS tracking|| ",
+      "IP68 water resistance"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 403,
+    "product_title": "Garmin Forerunner 955",
+    "product_image": "https://i.ibb.co.com/6DrLCmB/Garmin-Forerunner-955.jpg",
+    "category": "Smartwatches",
+    "price": 499.99,
+    "description": "Premium Garmin sports watch for running, with solar charging and performance metrics.",
+    "Specification": [
+      "1.3-inch sunlight-visible display|| ",
+      "Multi-band GPS|| ",
+      "Heart rate monitor|| ",
+      "Up to 20 days battery life with solar"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 404,
+    "product_title": "Fitbit Versa 4",
+    "product_image": "https://i.ibb.co.com/c8PG762/Fitbit-Versa-4.jpg",
+    "category": "Smartwatches",
+    "price": 229.99,
+    "description": "Versatile Fitbit smartwatch with 24/7 heart rate monitoring and sleep tracking.",
+    "Specification": [
+      "1.58-inch color touchscreen|| ",
+      "Daily readiness score|| ",
+      "Built-in GPS|| ",
+      "Water resistant to 50 meters"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 405,
+    "product_title": "Amazfit GTR 3 Pro",
+    "product_image": "https://i.ibb.co.com/25p6P9y/Amazfit-GTR-3-Pro.jpg",
+    "category": "Smartwatches",
+    "price": 199.99,
+    "description": "Stylish Amazfit smartwatch with comprehensive health tracking and customizable display.",
+    "Specification": [
+      "1.45-inch AMOLED display|| ",
+      "Alexa built-in|| ",
+      "150+ sports modes|| ",
+      "5 ATM water resistance"
+    ],
+    "availability": true,
+    "rating": 4.4
   }
 ]

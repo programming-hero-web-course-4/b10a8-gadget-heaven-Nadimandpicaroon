@@ -9,6 +9,7 @@ import { WishlistContext } from "../WishList/WishListContext";
 const GadgetDetails = () => {
   const { addProduct } = useContext(CartContext);
   const { addProductToWishlist } = useContext(WishlistContext);
+  console.log(addProductToWishlist);
   const { product_id } = useParams();
   const id = parseInt(product_id);
 

@@ -10,6 +10,7 @@ import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import Statistics from "./components/Statistics/Statistics.jsx";
 import GadgetDetails from "./components/GadgetDetails/GadgetDetails.jsx";
 import { CartContextProvider } from "./Context/CartContext.jsx";
+import { WishlistContextProvider } from "./components/WishList/WishListContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CartContextProvider>
-      <RouterProvider router={router} />
+      <WishlistContextProvider>
+        <RouterProvider router={router} />
+      </WishlistContextProvider>
     </CartContextProvider>
   </StrictMode>
 );

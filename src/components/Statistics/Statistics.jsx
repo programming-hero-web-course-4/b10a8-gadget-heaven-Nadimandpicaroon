@@ -20,6 +20,7 @@ const Statistics = () => {
             superior quality and customer satisfaction across our gadget range.
           </p>
         </div>
+        <div></div>
       </div>
     </div>
   );

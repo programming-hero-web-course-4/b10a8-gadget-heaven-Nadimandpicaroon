@@ -1,6 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComputer } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
+  const location = useLocation();
   const links = (
     <>
       <li>
@@ -18,10 +21,19 @@ const NavBar = () => {
           <a>Dashboard</a>
         </NavLink>
       </li>
+      <li>
+        <NavLink to="about">
+          <a>About</a>
+        </NavLink>
+      </li>
     </>
   );
   return (
-    <div className="navbar container mx-auto bg-base-100">
+    <div
+      className={`navbar container mx-auto ${
+        location.pathname === "/" ? "bg-[#9538E2] text-white" : "bg-base-100"
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,7 +59,10 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+        <a className="btn btn-ghost text-xl">
+          <FontAwesomeIcon className="text-gray-800" icon={faComputer} /> Gadget
+          Heaven
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>

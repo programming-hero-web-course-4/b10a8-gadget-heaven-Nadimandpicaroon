@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 import { getLocalStorage, setLocalStorage } from "../utilities/LocalStorage";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const CartContext = createContext({});
 
@@ -14,14 +16,28 @@ export const CartContextProvider = ({ children }) => {
     );
 
     if (isProductInCart) {
-      alert("Product is already selected");
+      toast.warn("Product is already selected", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
 
       return;
     }
     const newCartProducts = [...cartProducts, product];
     setCartProducts(newCartProducts);
     setLocalStorage("cartProducts", newCartProducts);
-    alert("Added in the cart");
+    toast.success("Added to the cart", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
     console.log(cartProducts);
   }
   function removeProduct(product_id) {
@@ -30,7 +46,14 @@ export const CartContextProvider = ({ children }) => {
     );
     setLocalStorage("cartProducts", filteredProducts);
     setCartProducts(filteredProducts);
-    alert(`Product has been removed`);
+    toast.info("Product has been removed", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
   }
 
   function removeCartProducts() {
@@ -38,10 +61,8 @@ export const CartContextProvider = ({ children }) => {
     setCartProducts([]);
   }
   function sortCartProduct() {
-    const sorted = cartProducts.sort(
-      (productA, productB) => productA.price - productB.price
-    );
-    setCartProducts(sorted);
+    const sorted = cartProducts.sort((a, b) => b.price - a.price);
+    setCartProducts([...sorted]);
   }
   return (
     <CartContext.Provider

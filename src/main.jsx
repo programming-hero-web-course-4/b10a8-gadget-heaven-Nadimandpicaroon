@@ -11,6 +11,8 @@ import Statistics from "./components/Statistics/Statistics.jsx";
 import GadgetDetails from "./components/GadgetDetails/GadgetDetails.jsx";
 import { CartContextProvider } from "./Context/CartContext.jsx";
 import { WishlistContextProvider } from "./components/WishList/WishListContext.jsx";
+import { HelmetProvider } from "react-helmet-async";
+import About from "./components/About/About.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,10 @@ const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
       },
       {
+        path: "about",
+        element: <About></About>,
+      },
+      {
         path: "statistics",
         element: <Statistics></Statistics>,
       },
@@ -41,10 +47,12 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <CartContextProvider>
-      <WishlistContextProvider>
-        <RouterProvider router={router} />
-      </WishlistContextProvider>
-    </CartContextProvider>
+    <HelmetProvider>
+      <CartContextProvider>
+        <WishlistContextProvider>
+          <RouterProvider router={router} />
+        </WishlistContextProvider>
+      </CartContextProvider>
+    </HelmetProvider>
   </StrictMode>
 );

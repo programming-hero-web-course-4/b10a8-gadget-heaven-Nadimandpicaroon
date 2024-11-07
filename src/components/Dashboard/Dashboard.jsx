@@ -3,6 +3,7 @@ import { WishlistContext } from "../WishList/WishListContext";
 import { useContext, useEffect, useState } from "react";
 import DashProduct from "../DashProduct/DashProduct";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -44,7 +45,16 @@ const Dashboard = () => {
 
   return (
     <div>
-      <div className="bg-[#9538E2] text-center items-center">
+      <Helmet>
+        <title>
+          Dashboard - Here You Can Manage Your Cart And Wishlist Items
+        </title>
+        <meta
+          name="description"
+          content="View and manage your shopping cart and wishlist on your dashboard."
+        />
+      </Helmet>
+      <div className="bg-[#9538E2] text-center items-center py-5">
         <h2 className="text-3xl text-white font-bold my-5">Dashboard</h2>
         <p className="text-lg text-white my-6">
           Explore the latest gadgets that will take your experience to the next
@@ -77,7 +87,7 @@ const Dashboard = () => {
       {view === "cart" ? (
         <div>
           <div>
-            <div className="flex justify-between items-center container mx-auto">
+            <div className="flex justify-between items-center container my-6 mx-auto">
               <div>
                 <h3 className="text-3xl font-bold">Cart</h3>
               </div>

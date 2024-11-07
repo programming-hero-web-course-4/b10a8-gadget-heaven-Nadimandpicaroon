@@ -1,4 +1,6 @@
 import { createContext, useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const WishlistContext = createContext({});
 
@@ -11,12 +13,26 @@ export const WishlistContextProvider = ({ children }) => {
     );
 
     if (isProductInWishlist) {
-      alert("Product is already in the wishlist");
+      toast.warn("Product is already selected", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
       return;
     }
 
     setWishlistProducts([...wishlistProducts, product]);
-    alert("Added to wishlist");
+    toast.success("Added to the Wishlist", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
   }
 
   function removeProductFromWishlist(product_id) {
@@ -24,7 +40,14 @@ export const WishlistContextProvider = ({ children }) => {
       (wishlistProduct) => wishlistProduct.product_id !== product_id
     );
     setWishlistProducts(filteredWishlist);
-    alert("Removed from wishlist");
+    toast.info("Product has been removed from Wishlist", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
   }
 
   return (

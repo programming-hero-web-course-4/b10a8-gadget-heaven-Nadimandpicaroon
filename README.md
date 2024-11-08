@@ -1,5 +1,7 @@
 <h1>Live Site Link : https://b10a8-gadget-heaven-nadimandpicaroon.vercel.app/ </h1>
 
+<h2>Requirement Pdf : https://drive.google.com/file/d/1nu9cCfevrg32OyvFdnG0UAmpnumlALqX/view</h2>
+
 <h2> List of React Fundamental Concepts Used in the Project:</h2>
 <ul>
 <li>

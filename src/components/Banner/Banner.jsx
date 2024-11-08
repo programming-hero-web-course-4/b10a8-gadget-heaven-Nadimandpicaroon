@@ -3,8 +3,8 @@ import bannerImg from "../../assets/banner.jpg";
 const Banner = () => {
   return (
     <div>
-      <div className="container mx-auto bg-[#9538E2] text-white rounded-lg items-center text-center">
-        <h2 className="text-5xl font-bold my-6">
+      <div className="container mx-auto bg-[#9538E2] text-white items-center text-center">
+        <h2 className="text-5xl font-bold">
           Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories
         </h2>
         <p className="text-md mb-6">
